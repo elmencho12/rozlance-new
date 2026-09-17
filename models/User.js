@@ -1,0 +1,5 @@
+headline: { type: String, default: 'Founder @ Rozlance | MERN Developer' },
+about: String,
+location: { type: String, default: 'Lahore, Pakistan' },
+profileViews: { type: Number, default: 128 },
+connectionsCount: { type: Number, default: 0 },

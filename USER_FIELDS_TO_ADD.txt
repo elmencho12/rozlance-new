@@ -1,0 +1,46 @@
+// ===============================
+// ROZLANCE - USER.JS MEIN YE FIELDS ADD KARO
+// ===============================
+// Location: models/User.js (existing file)
+// In your User schema, add these fields inside the schema object:
+
+headline: { type: String, default: "" }, // e.g. "Founder @ Rozlance | Full Stack Dev"
+about: { type: String, default: "" },
+avatar: { type: String, default: "" }, // URL
+bannerImage: { type: String, default: "" },
+location: { type: String, default: "Lahore, Pakistan" },
+openToWork: { type: Boolean, default: false },
+openToWorkRoles: [String],
+profileViews: { type: Number, default: 0 },
+connectionsCount: { type: Number, default: 0 },
+followersCount: { type: Number, default: 0 },
+followingCount: { type: Number, default: 0 },
+featured: [{
+  title: String,
+  link: String,
+  image: String
+}],
+languages: [{
+  name: String,
+  proficiency: String
+}],
+
+// ALSO ADD Virtuals (optional but recommended):
+// UserSchema.virtual('experiences', { ref: 'Experience', localField: '_id', foreignField: 'user' });
+// UserSchema.virtual('educations', { ref: 'Education', localField: '_id', foreignField: 'user' });
+// UserSchema.virtual('skills', { ref: 'Skill', localField: '_id', foreignField: 'user' });
+
+// Steps:
+// 1. Open rozlance-new/models/User.js
+// 2. Paste these fields
+// 3. Save and run npm run dev to test
+// 4. No migration needed - defaults will handle old users
+
+// Example Ubaid profile seed:
+{
+  headline: "Founder @ Rozlance | Rozgar Ka Naya Andaaz 🇵🇰",
+  about: "Building Pakistan's professional network. Full Stack Developer. Next.js | MERN | LinkedIn Clone Specialist.",
+  location: "Lahore, Pakistan",
+  openToWork: false,
+  profileViews: 128
+}

@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ROZLANCE - Full LinkedIn Clone 🇵🇰
 
-## Getting Started
+### Rozgar Ka Naya Andaaz - Founder Ubaid Bin Mushtaq
 
-First, run the development server:
+Ye hai Rozlance ka complete LinkedIn clone module. Is ZIP mein 10 models + 2 APIs + 1 Feed page included hai.
 
+---
+
+## 📦 Installation Steps (Urdu + English)
+
+### Step 1: Extract ZIP
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# ZIP ko download karne ke baad
+# rozlance-new folder mein extract karo
+unzip rozlance-linkedin-clone.zip -d ./rozlance-new/
+# ya manually extract karo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Step 2: Copy Files
+Sab files already sahi folders mein hain:
+- `models/` -> 10 new mongoose models
+- `app/api/posts/route.js` -> Posts feed API with JWT
+- `app/api/connections/route.js` -> Connections API
+- `app/feed/page.jsx` -> Full LinkedIn feed UI
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Step 3: User.js Update Karo (IMPORTANT!)
+```bash
+# Open USER_FIELDS_TO_ADD.txt and copy fields into models/User.js
+```
+Fields: headline, about, avatar, bannerImage, location, openToWork, profileViews, connectionsCount etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Step 4: Git Push
+```bash
+git add .
+git commit -m "feat: add full LinkedIn clone - 10 models + feed + APIs - Rozlance 🇵🇰"
+git push origin main
+```
 
-## Learn More
+### Step 5: Vercel Deploy
+- Vercel dashboard kholo
+- Project -> Redeploy
+- Check logs: agar error nahi toh mubarak ho!
 
-To learn more about Next.js, take a look at the following resources:
+### Step 6: Test Karo
+- Visit: https://your-domain.com/feed
+- Login with JWT token
+- Create post, check likes, connections
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✅ Included Models (10)
+1. Experience 2. Education 3. Skill 4. Post 5. Comment 6. Connection 7. Company 8. Job 9. Notification 10. Message
 
-## Deploy on Vercel
+## 🔌 API Routes (2)
+- GET/POST /api/posts - JWT protected feed
+- GET/POST /api/connections - Connection requests
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Pages (1)
+- /feed - LinkedIn-style feed with Ubaid's profile (128 viewers)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Stack
+Next.js 14, Mongoose, JWT, Tailwind, Dark Mode
+
+Built with ❤️ in Lahore, Pakistan
+#Rozlance #RozgarKaNayaAndaaz
+
+Need help? DM Ubaid on LinkedIn.

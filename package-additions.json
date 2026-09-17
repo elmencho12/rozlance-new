@@ -1,0 +1,6 @@
+{
+  "comment": "Add these deps if not already installed",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}
